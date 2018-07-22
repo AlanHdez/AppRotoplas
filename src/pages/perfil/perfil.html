@@ -1,0 +1,79 @@
+<!--
+  Generated template for the PerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/usuario.png">
+      </ion-avatar>
+      <h1>{{usuario.nombre}}</h1>
+      <p>{{usuario.tipo}}</p>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-note>
+          <div>-40 pet</div>
+          <ion-icon name="ios-leaf"></ion-icon>
+        </ion-note>
+      </ion-col>
+      <ion-col>
+        <ion-note>
+          45 días
+        </ion-note>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.nombre></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.user></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Correo</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.email></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>ID dispositivo</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.idDisp></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Tipo</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.tipo></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]=usuario.password></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button icon-end (click)="editarUsuario()">
+    Guardar Cambios
+    <ion-icon name="md-create"></ion-icon>
+  </button>
+  <button ion-button icon-start (click)="paginaLogin()">
+    <ion-icon name="md-log-out"></ion-icon>
+    Cerrar Sesión
+  </button>
+</ion-content>

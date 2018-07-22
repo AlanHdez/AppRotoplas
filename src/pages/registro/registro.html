@@ -1,0 +1,47 @@
+<!--
+  Generated template for the RegistroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+</ion-header>
+
+
+<ion-content padding>
+  <img src="assets/imgs/rotoplas_logo.jpg" />
+  <p>Crea una cuenta</p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.nombre></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.user></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Correo</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.email></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>ID dispositivo</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.idDisp></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Tipo</ion-label>
+      <ion-input type="text" [(ngModel)]=usuario.tipo></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]=usuario.password></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="registro()">Registrar</button>
+  <button ion-button clear (click)="paginaLogin()">¿Tienes una cuenta? Iniciar sesión</button>  
+</ion-content>
