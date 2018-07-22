@@ -1,0 +1,8 @@
+{
+  "name": "approtoplas",
+  "app_id": "d04c74ae",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
