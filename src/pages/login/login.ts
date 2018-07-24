@@ -31,18 +31,29 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+    /*cuando la pagina carga se obtienen los usuarios que hay en la BD
+    mediante el método getUsuarios el cual devuelve una lista y esa a su vez 
+    se pasa a un arreglo para su manipulacion*/
     this.rotoplasServicios.getUsuarios().subscribe( datos =>{
       this.usuarios = datos;
     });
+    //Se imprime en consola el arreglo ya con los usuarios recibidos
     console.log('Usuarios');
     console.log(this.usuarios);
   }
+  //Método con el que se va hacia la pagina de Registro
   paginaRegistro(){
     this.navCtrl.push(RegistroPage);
   }
   inicioSesion(){
+    //Se imprime en consola los valores que contienen los input 
     console.log('usuario:'+this.user);
     console.log('password: '+this.password);
+    /*Los arreglos tienen el método filter el cual permite realizar un filtro
+    en el arreglo de acuerdo a distintas condiciones, en este caso nos regresa
+    el usuario cuyo usuario y contraseña sean igual a los valores del input
+    así llenamos la variable usuario con los campos de ese usuario correspondiente
+    */
     this.usuarios.filter(item =>{
       if(item.user == this.user &&
         item.password == this.password){
@@ -61,6 +72,9 @@ export class LoginPage {
     console.log(this.usuario);
     console.log('id');
     console.log(this.usuario.id);
+    /*Si obtenemos un usuario el id será distinto a null y se enviarán como
+    parametros a la tabspage toda la información del usuario y se mostrará
+    una alerta de que se inició sesión con éxito*/
     if(this.usuario.id != null){
       this.navCtrl.push(TabsPage, {
         id:this.usuario.id,

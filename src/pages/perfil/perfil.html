@@ -15,6 +15,7 @@
       <ion-avatar item-start>
         <img src="assets/imgs/usuario.png">
       </ion-avatar>
+      <!--se mostrarán los valores de la variable usuario.nombre y usuario.tipo-->
       <h1>{{usuario.nombre}}</h1>
       <p>{{usuario.tipo}}</p>
     </ion-item>
@@ -40,6 +41,9 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Nombre</ion-label>
+      <!--se les asignan nombres de variables a los distintos inputs
+      donde cada uno forma parte del tipo usuario es por eso que cada
+      nombre se compone por usuario. + nombre_del_campo-->
       <ion-input type="text" [(ngModel)]=usuario.nombre></ion-input>
     </ion-item>
 
@@ -68,10 +72,12 @@
       <ion-input type="password" [(ngModel)]=usuario.password></ion-input>
     </ion-item>
   </ion-list>
+  <!--El botón emplea el método editarUsuario-->
   <button ion-button icon-end (click)="editarUsuario()">
     Guardar Cambios
     <ion-icon name="md-create"></ion-icon>
   </button>
+  <!--El botón emplea el método paginaLogin-->
   <button ion-button icon-start (click)="paginaLogin()">
     <ion-icon name="md-log-out"></ion-icon>
     Cerrar Sesión

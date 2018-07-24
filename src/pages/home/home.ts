@@ -11,6 +11,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
+  //Función para ir a la pagina de Login
   paginaLogin(){
     this.navCtrl.push(LoginPage);
   }

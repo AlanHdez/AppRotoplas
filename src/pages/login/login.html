@@ -14,15 +14,19 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Usuario</ion-label>
+      <!--input de tipo text cuya variable para el valor es "user"-->
       <ion-input type="text" [(ngModel)]=user></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label floating>Contraseña</ion-label>
+      <!--input de tipo pssword cuya variable para el valor es "password"-->
       <ion-input type="password" [(ngModel)]=password></ion-input>
     </ion-item>
   </ion-list>
+  <!--boton que empleará el método inicioSesion-->
   <button ion-button (click)="inicioSesion()">Iniciar Sesion Ahora</button>
   <button ion-button clear>Restablecer password</button>
+  <!--boton que empleará el método paginaRegistro-->
   <button ion-button clear (click)="paginaRegistro()">¿No tienes cuenta? Regístrate</button>  
 </ion-content>

@@ -20,7 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
+//configuración de la BD en FireBase a utilizar
 export const firebaseConfig = {
   apiKey: "AIzaSyB_dGUVmTWg-gN_GBRORHz89vFGbhFzgwE",
   authDomain: "rotoplasapp-12198.firebaseapp.com",

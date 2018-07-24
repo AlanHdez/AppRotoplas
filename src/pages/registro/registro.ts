@@ -33,14 +33,11 @@ export class RegistroPage {
     this.navCtrl.push(LoginPage);
   }
   registro(){
-    /*this.usuario.tipo = this.tipo;
-    this.usuario.email = this.email;
-    this.usuario.nombre = this.nombre;
-    this.usuario.user = this.user;
-    this.usuario.password = this.password;
-    this.usuario.idDisp = this.idDisp;*/
+    //El id usuario utiliza es asignado por la la fecha del sistema
     this.usuario.id = Date.now();
     console.log(this.usuario);
+    /*Se va al método editarUsuario el cual modifica la información
+  obtenido de los inputs en el html*/
     this.rotoplasServicios.createUsario(this.usuario);
     alert('Registro con éxito');
     this.navCtrl.push(LoginPage);

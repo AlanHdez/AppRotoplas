@@ -16,6 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class PanelPage {
   tiempo:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    //se determina el valor por default de la variable tiempo
     this.tiempo = 'dia';
   }
 

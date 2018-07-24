@@ -13,6 +13,9 @@
   <p>Crea una cuenta</p>
   <ion-list>
     <ion-item>
+      <!--se les asignan nombres de variables a los distintos inputs
+      donde cada uno forma parte del tipo usuario es por eso que cada
+      nombre se compone por usuario. + nombre_del_campo-->
       <ion-label floating>Nombre</ion-label>
       <ion-input type="text" [(ngModel)]=usuario.nombre></ion-input>
     </ion-item>
@@ -42,6 +45,8 @@
       <ion-input type="password" [(ngModel)]=usuario.password></ion-input>
     </ion-item>
   </ion-list>
+  <!--El botón emplea el método registro-->
   <button ion-button (click)="registro()">Registrar</button>
+  <!--El botón emplea el método paginaLogin-->
   <button ion-button clear (click)="paginaLogin()">¿Tienes una cuenta? Iniciar sesión</button>  
 </ion-content>

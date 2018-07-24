@@ -9,11 +9,14 @@ import { MsmPage } from '../msm/msm';
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
+  //Se asignan las paginas a las que se irán en cada pestaña
   tab1Root = PerfilPage;
   tab2Root = PanelPage;
   tab3Root = MsmPage;
   infousuario:any;
     constructor(public navParams: NavParams) {
+      /*se obtienen los parametros y se asignan a la variable infousuario 
+      que forma parte de rootparams*/
       this.infousuario = {
         id:this.navParams.get('id'),
         tipo:this.navParams.get('tipo'),

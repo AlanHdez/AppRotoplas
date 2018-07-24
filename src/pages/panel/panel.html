@@ -6,6 +6,7 @@
 -->
 <ion-header>
   <ion-toolbar>
+    <!--Al segmento se le asigna el nombre tiempo y sus distintos valores-->
     <ion-segment [(ngModel)]="tiempo">
       <ion-segment-button value="dia">
         Día
@@ -20,7 +21,8 @@
   </ion-toolbar>
 </ion-header>
 
-
+<!--ngSwitch es como un Switch donde de acuerdo al valor de la variable tiempo
+se mostrarán distintos componentes-->
 <ion-content padding [ngSwitch]="tiempo">
   <div *ngSwitchCase="'dia'">
       <ion-card>
